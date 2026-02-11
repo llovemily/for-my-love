@@ -13,10 +13,10 @@ let opacity = 0;
 let stage = 0;
 let isFinished = false;
 
-// ОЧЕНЬ МЕДЛЕННО (800 кадров — это около 13 секунд на фразу)
+
 const speedFactor = 800; 
 
-// Твоя гифка с Tenor
+
 const myGifUrl = "https://media.tenor.com/9Y-eDAjvU1sAAAAi/love-you.gif";
 
 for (let i = 0; i < 400; i++) {
@@ -49,7 +49,7 @@ function draw() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Рисуем мерцающие звезды
+    
     ctx.fillStyle = "white";
     stars.forEach(s => {
         let b = Math.abs(Math.sin(frame * 0.02 + s.blink * 10));
@@ -82,7 +82,7 @@ function draw() {
                 opacity = 0;
             }
         } else {
-            // ФИНАЛЬНЫЙ ЭКРАН (остается на месте)
+            
             ctx.fillStyle = "rgba(255, 182, 193, 1)";
             ctx.fillText("И я не могу дождаться того часа, когда мы будем вместе", canvas.width / 2, canvas.height / 2 - 30);
             
